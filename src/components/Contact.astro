@@ -36,15 +36,52 @@
     <div class="cta-inner">
         <div class="cta-text">
             <h2>Prêt à booster <span>votre activité ?</span></h2>
-            <p>Laissez-nous vos coordonnées, on vous rappelle pour lancer votre site.</p>
+            <p>Zéro formulaire, zéro perte de temps. On discute directement de votre projet sur WhatsApp.</p>
         </div>
-        <form class="cta-form">
-            <div class="input-group">
-                <input type="text" placeholder="Nom ou Entreprise" required>
-                <input type="tel" placeholder="N° de téléphone" required>
-            </div>
-            <input type="email" placeholder="Adresse Email" required>
-            <button type="submit" class="btn-submit">Être rappelé gratuitement</button>
-        </form>
+        <div class="cta-action">
+            <a href="https://wa.me/33616552811?text=Bonjour%20David,%20je%20souhaite%20lancer%20mon%20site%20Express%20Artisan." class="btn-whatsapp-hero">
+                <i class="fab fa-whatsapp"></i> Discuter sur WhatsApp
+            </a>
+            <p class="response-time">Réponse rapide garantie par David</p>
+        </div>
     </div>
 </section>
+
+<style>
+    .cta-action {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn-whatsapp-hero {
+        background: #25d366;
+        color: white;
+        padding: 25px 40px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 900;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: transform 0.3s;
+        box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
+    }
+    
+    .btn-whatsapp-hero:hover {
+        transform: scale(1.05);
+    }
+    
+    .response-time {
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+        .cta-inner { padding: 40px 20px; }
+        .btn-whatsapp-hero { font-size: 1.1rem; padding: 20px; }
+    }
+</style>

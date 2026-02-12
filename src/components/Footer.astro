@@ -1,0 +1,53 @@
+---
+---
+<footer>
+    <div class="footer-content">
+        <div class="footer-bottom">
+            <div class="logo">EXPRESS<span>ARTISAN</span></div>
+            <p>&copy; 2026 Express Artisan - Le web intelligent pour le bâtiment.</p>
+            <div class="footer-links">
+                <a href="#legal" id="legal-trigger">Mentions légales</a>
+            </div>
+        </div>
+        
+        <div id="legal-info" class="legal-details" style="display:none;">
+            <strong>Mentions Légales :</strong><br>
+            Entreprise : David CHEMLA (SAS)<br>
+            Responsable : David CHEMLA<br>
+            SIREN : 912 244 696 | SIRET : 912 244 696 00015<br>
+            TVA : FR59912244696<br>
+            Siège Social : 1001 AVENUE DE LA BATTERIE MARINA BAIE DES ANGES - LE DUCAL - APP, 06270 VILLENEUVE-LOUBET<br>
+            Activité (NAF) : 4932Z<br>
+            Création : 07 avril 2022
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/33616552811" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>Un projet ? Discutons-en !</span>
+</a>
+
+<script>
+    const legalTrigger = document.getElementById('legal-trigger');
+    const legalInfo = document.getElementById('legal-info');
+    if (legalTrigger && legalInfo) {
+        legalTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            legalInfo.style.display = legalInfo.style.display === 'none' ? 'block' : 'none';
+        });
+    }
+
+    // Smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                document.querySelector(href).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>

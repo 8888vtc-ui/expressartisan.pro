@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparatif Creaweb - Économies pour Artisans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #10b981;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --glass: rgba(255, 255, 255, 0.8);
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e5eefc 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .comparison-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 24px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.02);
+            font-weight: 600;
+            color: var(--gray);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        .feature-col { width: 40%; }
+        .agency-col { width: 30%; }
+        .creaweb-col { 
+            width: 30%; 
+            background: rgba(37, 99, 235, 0.05);
+            font-weight: 600;
+        }
+
+        .creaweb-badge {
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .price-tag {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .price-high { color: #ef4444; }
+        .price-low { color: var(--secondary); }
+
+        .check { color: var(--secondary); font-weight: bold; }
+        .cross { color: #ef4444; font-weight: bold; }
+
+        .savings-footer {
+            background: var(--dark);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 0 0 24px 24px;
+        }
+
+        .savings-amount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            display: block;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            th, td { padding: 15px 10px; font-size: 0.9rem; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CREAWEB vs Agence Traditionnelle</h1>
+            <p class="subtitle">Pourquoi payer pour du superflu quand l'essentiel suffit à booster votre activité ?</p>
+        </header>
+
+        <div class="comparison-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="feature-col">Service / Frais</th>
+                        <th class="agency-col">Agence Classique</th>
+                        <th class="creaweb-col">Creaweb <span class="creaweb-badge">Gagnant</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Création du site</strong></td>
+                        <td><span class="price-high">1 500 € à 3 000 €</span></td>
+                        <td><span class="price-low">0 €</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Abonnement Mensuel</strong></td>
+                        <td><span class="price-high">50 € à 120 € / mois</span></td>
+                        <td><span class="price-low">10 € / mois</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hébergement & SSL</strong></td>
+                        <td>Souvent en option</td>
+                        <td><span class="check">✓ Inclus</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maintenance</strong></td>
+                        <td>Facturée à l'heure</td>
+                        <td><span class="check">✓ Inclus</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Délai de mise en ligne</strong></td>
+                        <td>2 à 4 semaines</td>
+                        <td><span class="check">24 Heures</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="savings-footer">
+                <p>Économie moyenne la première année :</p>
+                <span class="savings-amount">DÈS 1 980 € D'ÉCONOMIE</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

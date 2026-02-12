@@ -1,34 +1,72 @@
-# EXPRESS ARTISAN 🏗️
-> "La présence web pro et sans frais cachés pour les artisans du bâtiment."
+# 🏗️ EXPRESS ARTISAN - Propulseur de Visibilité Artisanale
 
-## 🚀 Format ASTRO
-Le projet a été migré vers **Astro** pour des performances optimales (UltraSpeed) et une maintenance facilitée via des composants.
+> **"Votre site pro en 24h pour 10€/mois. Simple. Rapide. Radical."**
 
-### 🛠️ Structure du Projet
-- `src/components/` : Éléments modulaires (Navbar, Hero, Pricing, etc.)
-- `src/layouts/` : Structure de base HTML.
-- `src/pages/` : Page d'accueil et pages futures.
-- `src/styles/` : CSS global premium.
+Express Artisan est une agence digitale spécialisée pour les acteurs du bâtiment. Nous proposons une solution de présence web ultra-performante à un prix défiant toute concurrence, combinée à une stratégie de SEO local agressive.
 
-### 💻 Commandes de développement
-- `npm install` : Installer les dépendances.
-- `npm run dev` : Lancer le serveur de développement local.
-- `npm run build` : Générer le site statique pour Netlify.
+---
 
-## 1. Le Concept
-Démocratiser l'accès au web pour les pros du bâtiment avec une offre ultra-low-cost à **10 € / mois**, propulsée par Netlify.
+## 🚀 La Proposition de Valeur
 
-## 2. L'Offre Commerciale
+### 💎 Le pack "PRÉSENCE" (10€ / mois)
+- **UltraSpeed Website** : Plateforme Astro + Hébergement Netlify pour un chargement instantané.
+- **Zéro Engagement** : L'artisan reste libre.
+- **Conformité Totale** : RGPD vérifié, Mentions légales incluses, SSL activé.
+- **Conversion Directe** : Aucun formulaire complexe. Tout se passe sur WhatsApp pour une réactivité maximale.
 
-### 📦 L'Abonnement "Présence Web" (10 € / mois)
-- Site One-Page UltraSpeed.
-- RGPD Vérifié & Sécurisé (SSL).
-- URL personnalisée (sous-domaine inclus).
+### 🔥 Le pack "LANCEMENT LOCAL GMB" (300€ unique)
+- **SEO Local** : Création et optimisation de la fiche Google My Business (GMB).
+- **Le Duo Gagnant** : Liaison site web + fiche Google pour doubler la visibilité.
+- **Print & Digital** : **100 Cartes de visite offertes** avec QR Code personnalisé vers le site.
+- **Récolte Avis** : Système pour booster les avis clients positifs.
 
-### 🚀 Le Pack "Lancement Local GMB" (300 € unique)
-- Création/Optimisation Google My Business.
-- **100 Cartes de visite offertes** avec QR Code.
-- Kit récolte d'avis clients.
+---
 
-## ⚙️ Automatisation
-Le script `scripts/create_client.ps1` reste disponible pour générer rapidement des sites pour tes nouveaux clients à partir du dossier `template/`.
+## 🛠️ Structure Technique (Astro)
+
+Le projet utilise **Astro** pour des performances SEO optimales (zéro JS inutile).
+
+- `src/components/` : Blocs modulaires (Hero, Pricing, Strategy, Evidence...).
+- `src/pages/index.astro` : Site vitrine principal.
+- `src/pages/offres-sms.astro` : Landing page mobile dédiée au démarchage SMS (avec tracking).
+- `src/styles/global.css` : Design system premium (Glassmorphism, Indigo/Emerald scheme).
+
+---
+
+## 📱 Stratégie de Démarchage SMS
+
+Une page dédiée est disponible pour convertir les prospects contactés par SMS :
+**URL :** `your-domain.pro/offres-sms?s=PROSPECT_NAME`
+
+**Tracking inclus :** Le script identifie dynamiquement la source du clic (via le paramètre `s=`) et enregistre les clics sur le bouton WhatsApp dans le stockage local pour tes statistiques.
+
+---
+
+## ⚙️ Workflow de Publication
+
+### 1. Déploiement
+Le projet est lié au dépôt GitHub : `8888vtc-ui/expressartisan.pro`.
+Chaque `push` sur la branche `main` déclenche un build automatique sur Netlify.
+
+### 2. Création de site client
+Utilise le script PowerShell pour générer un template client en 10 secondes :
+`./scripts/create_client.ps1 -clientName "Jean Martin" -job "Plombier" -city "Nice"`
+
+---
+
+## ⚖️ Informations Légales du Site
+Le site affiche les mentions légales de l'entreprise :
+- **Entité** : David CHEMLA (SAS)
+- **SIREN** : 912 244 696
+- **Siège** : Villeneuve-Loubet (06270)
+- **Contact WhatsApp** : 06 16 55 28 11
+
+---
+
+## 📦 Commandes Utiles
+- `npm run dev` : Lancer en local.
+- `npm run build` : Préparer la production.
+- `git push origin main` : Mettre à jour le site live.
+
+---
+*Conçu avec expertise par David Chemla - Express Artisan © 2026*
